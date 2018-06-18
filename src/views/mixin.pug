@@ -1,0 +1,11 @@
+mixin hex(link)
+    .hexPX
+        svg#image-fill(xmlns='http://www.w3.org/2000/svg', version='1.1', xmlns:xlink='http://www.w3.org/1999/xlink' viewBox="0 0 86.6 100" x="0px" y="0px")
+            defs
+                pattern#image-bg(x='0', y='0', height='100', width='86.6', patternunits='userSpaceOnUse')
+                    image(width='100', height='100', xlink:href='http://placekitten.com/306/306')
+            if link
+                a(xlink:href= link target="_blank")
+                    polygon( class="hexagon" points="86.6,75 86.6,25 43.3,0 0,25 0,75 43.3,100 ", fill="url('#image-bg')")
+            else
+                polygon( class="hexagon hexagon__empty" points="86.6,75 86.6,25 43.3,0 0,25 0,75 43.3,100 ")
