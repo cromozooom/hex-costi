@@ -1,0 +1,135 @@
+$dev: "false"
+=dev($color)
+  @if $dev == "true"
+    border: 1px solid $color
+
+$width--m: 135px
+$height--m: $width--m * 1.154
+$margin-top: $height--m / 3.5 * -1
+
+
+
+.hexagon
+  stroke: #fff
+  //stroke: red
+  
+  stroke-miterlimit: 10
+  stroke-width: 3
+  &__empty
+    fill: #fff
+
+.inlineHex--m
+  margin: 0 auto
+  max-width: 6 * $width--m
+  display: flex
+  flex-wrap: wrap
+.sevenHex--m
+  margin: 0 auto
+  display: flex
+  flex-wrap: wrap
+  width: $width--m * 3
+  .hexPX--m:nth-child(1),.hexPX--m:nth-child(6)
+    margin-left: $width--m / 2
+  .hexPX--m:nth-child(3),.hexPX--m:nth-child(4),.hexPX--m:nth-child(5),.hexPX--m:nth-child(6),.hexPX--m:nth-child(7)
+    margin-top: $margin-top
+.hexPX--m--m
+  +dev(red)
+  width: $width--m
+  svg
+    width: $width--m
+    height: $height--m
+    +dev(blue)
+
+.fiveHex--m
+  margin: 0 auto
+  display: flex
+  flex-wrap: wrap
+  width: $width--m * 3
+  &__normal
+    .hexPX--m:nth-child(4),.hexPX--m:nth-child(6)
+      margin-left: $width--m / 2
+    .hexPX--m:nth-child(4),.hexPX--m:nth-child(5),.hexPX--m:nth-child(6),.hexPX--m:nth-child(7)
+      margin-top: $margin-top  
+  &__invert
+    .hexPX--m:nth-child(1)
+      margin-left: $width--m / 2
+    .hexPX--m:nth-child(3), .hexPX--m:nth-child(4),.hexPX--m:nth-child(5),.hexPX--m:nth-child(6),.hexPX--m:nth-child(7)
+      margin-top: $margin-top
+      
+.fourHex--m
+  margin: 0 auto
+  display: flex
+  flex-wrap: wrap
+  width: $width--m * 2.5
+  &__normal
+    .hexPX--m:nth-child(4),.hexPX--m:nth-child(6)
+      margin-left: $width--m / 2
+    .hexPX--m:nth-child(4),.hexPX--m:nth-child(5),.hexPX--m:nth-child(6),.hexPX--m:nth-child(7)
+      margin-top: $margin-top  
+  &__invert
+    .hexPX--m:nth-child(1)
+      margin-left: $width--m / 2
+    .hexPX--m:nth-child(3), .hexPX--m:nth-child(4),.hexPX--m:nth-child(5),.hexPX--m:nth-child(6),.hexPX--m:nth-child(7)
+      margin-top: $margin-top 
+
+@media (min-width: 768px)
+  $width--m: 205px
+  $height--m: $width--m * 1.154
+  $margin-top: $height--m / 3.5 * -1
+  .inlineHex--m
+    margin: 0 auto
+    max-width: 6 * $width--m
+    display: flex
+    flex-wrap: wrap
+  .sevenHex--m
+    margin: 0 auto
+    display: flex
+    flex-wrap: wrap
+    width: $width--m * 3
+    .hexPX--m:nth-child(1),.hexPX--m:nth-child(6)
+      margin-left: $width--m / 2
+    .hexPX--m:nth-child(3),.hexPX--m:nth-child(4),.hexPX--m:nth-child(5),.hexPX--m:nth-child(6),.hexPX--m:nth-child(7)
+      margin-top: $margin-top
+  .hexPX--m
+    +dev(red)
+    width: $width--m
+    svg
+      width: $width--m
+      height: $height--m
+      +dev(blue)
+
+  .fiveHex--m
+    margin: 0 auto
+    display: flex
+    flex-wrap: wrap
+    width: $width--m * 3
+    &__normal
+      .hexPX--m:nth-child(4),.hexPX--m:nth-child(6)
+        margin-left: $width--m / 2
+      .hexPX--m:nth-child(4),.hexPX--m:nth-child(5),.hexPX--m:nth-child(6),.hexPX--m:nth-child(7)
+        margin-top: $margin-top  
+    &__invert
+      .hexPX--m:nth-child(1)
+        margin-left: $width--m / 2
+      .hexPX--m:nth-child(3), .hexPX--m:nth-child(4),.hexPX--m:nth-child(5),.hexPX--m:nth-child(6),.hexPX--m:nth-child(7)
+        margin-top: $margin-top
+        
+  .fourHex--m
+    margin: 0 auto
+    display: flex
+    flex-wrap: wrap
+    width: $width--m * 2.5
+    &__normal
+      .hexPX--m:nth-child(4),.hexPX--m:nth-child(6)
+        margin-left: $width--m / 2
+      .hexPX--m:nth-child(4),.hexPX--m:nth-child(5),.hexPX--m:nth-child(6),.hexPX--m:nth-child(7)
+        margin-top: $margin-top  
+    &__invert
+      .hexPX--m:nth-child(1)
+        margin-left: $width--m / 2
+      .hexPX--m:nth-child(3), .hexPX--m:nth-child(4),.hexPX--m:nth-child(5),.hexPX--m:nth-child(6),.hexPX--m:nth-child(7)
+        margin-top: $margin-top 
+  
+
+
+    
